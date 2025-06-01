@@ -14,14 +14,14 @@ bot.onText(/\/start/, (msg) => {
     const welcomeMessage = `
 Привет! Я бот для управления вашими учетными данными и бронированиями.
 Доступные команды:
-/get-credentials - получить ваши логин и пароль
-/get-booked - получить список ваших бронирований
+/credentials - получить ваши логин и пароль
+/booked - получить список ваших бронирований
     `;
     bot.sendMessage(chatId, welcomeMessage);
 });
 
 // Обработчик команды /get-credentials
-bot.onText(/\/get-credentials/, async (msg) => {
+bot.onText(/\/credentials/, async (msg) => {
     const chatId = msg.chat.id;
     
     try {
@@ -46,7 +46,7 @@ bot.onText(/\/get-credentials/, async (msg) => {
 });
 
 // Обработчик команды /get-booked
-bot.onText(/\/get-booked/, async (msg) => {
+bot.onText(/\/booked/, async (msg) => {
     const chatId = msg.chat.id;
     
     try {

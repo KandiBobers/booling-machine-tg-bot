@@ -2,7 +2,7 @@ import TelegramBot from 'node-telegram-bot-api';
 import axios from 'axios';
 
 // Замените на ваш токен бота
-const TELEGRAM_BOT_TOKEN = 'YOUR_TELEGRAM_BOT_TOKEN';
+const TELEGRAM_BOT_TOKEN = '7535886611:AAE1m7tIVUhtuXus6RgMpMuDc6MveDBxVxA';
 const API_BASE_URL = 'YOUR_API_BASE_URL'; // Например: 'https://api.example.com'
 
 // Инициализация бота

@@ -3,7 +3,11 @@ import axios from 'axios';
 
 // Замените на ваш токен бота
 const TELEGRAM_BOT_TOKEN = '7535886611:AAE1m7tIVUhtuXus6RgMpMuDc6MveDBxVxA';
+<<<<<<< HEAD
 const API_BASE_URL = 'https://web-4.free.beeceptor.com'; 
+=======
+const API_BASE_URL = 'http://localhost:3000/api'; // Например: 'https://api.example.com'
+>>>>>>> 00309db554059a08d35fabcb4c405acc945401a1
 
 // Инициализация бота
 const bot = new TelegramBot(TELEGRAM_BOT_TOKEN, { polling: true });

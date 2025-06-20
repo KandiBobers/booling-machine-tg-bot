@@ -1,14 +1,11 @@
 import TelegramBot from 'node-telegram-bot-api';
 import axios from 'axios';
 
-// Замените на ваш токен бота
 const TELEGRAM_BOT_TOKEN = '7535886611:AAE1m7tIVUhtuXus6RgMpMuDc6MveDBxVxA';
-const API_BASE_URL = 'http://localhost:3000/api'; // Например: 'https://api.example.com'
+const API_BASE_URL = 'http://app:3000/api';
 
-// Инициализация бота
 const bot = new TelegramBot(TELEGRAM_BOT_TOKEN, { polling: true });
 
-// Обработчик команды /start
 bot.onText(/\/start/, (msg) => {
     const chatId = msg.chat.id;
     const welcomeMessage = `
@@ -20,7 +17,6 @@ bot.onText(/\/start/, (msg) => {
     bot.sendMessage(chatId, welcomeMessage);
 });
 
-// Обработчик команды /get-credentials
 bot.onText(/\/credentials/, async (msg) => {
     const chatId = msg.chat.id;
     
@@ -45,7 +41,6 @@ bot.onText(/\/credentials/, async (msg) => {
     }
 });
 
-// Обработчик команды /get-booked
 bot.onText(/\/booked/, async (msg) => {
     const chatId = msg.chat.id;
     
@@ -75,10 +70,8 @@ bot.onText(/\/booked/, async (msg) => {
             }
         });
 
-        // Отправляем текстовое сообщение
         await bot.sendMessage(chatId, message);
         
-        // Отправляем фотографии отдельными сообщениями
         for (const booking of bookings) {
             if (booking.photo_url) {
                 try {
